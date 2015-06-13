@@ -48,11 +48,11 @@
 
           <section class='suggestedBeer'>
             <ul>
-              <li class=beer1>{{name}}</li>
-              <li class=beer2>{{name}}</li>
-              <li class=beer3>{{name}}</li>
-              <li class=beer4>{{name}}</li>
-              <li class=beer5>{{name}}</li>
+              <li class=beer1>{{styles.data[0].name}}</li>
+              <li class=beer2>{{styles.data[1].name}}</li>
+              <li class=beer3>{{styles.data[2].name}}</li>
+              <li class=beer4>{{styles.data[3].name}}</li>
+              <li class=beer5>{{styles.data[4].name}}</li>
             </ul>
           </section>
 
@@ -63,24 +63,24 @@
           <section class='beerSelection'>
             <label for='beerType'>
               <select>
-                <option class='beer1'>{{name}}</option>
-                <option class='beer2'>{{name}}</option>
-                <option class='beer3'>{{name}}</option>
-                <option class='beer4'>{{name}}</option>
-                <option class='beer5'>{{name}}</option>
+                <option class='beer1'>{{styles.data[0].name}}</option>
+                <option class='beer2'>{{styles.data[1].name}}</option>
+                <option class='beer3'>{{styles.data[2].name}}</option>
+                <option class='beer4'>{{styles.data[3].name}}</option>
+                <option class='beer5'>{{styles.data[4].name}}</option>
               </select>
             </label> <!-- beerType -->
             <div class='beerInfo'>
-              <h3 class='beer1'>{{name}}</h3>
-              <p class='beer1info'>{{description}}</p>
-              <h3 class='beer2'>{{name}}</h3>
-              <p class='beer2info'>{{description}}</p>
-              <h3 class='beer3'>{{name}}</h3>
-              <p class='beer3info'>{{description}}</p>
-              <h3 class='beer4'>{{name}}</h3>
-              <p class='beer4info'>{{description}}</p>
-              <h3 class='beer5'>{{name}}</h3>
-              <p class='beer5info'>{{description}}</p>
+              <h3 class='beer1'>{{styles.data[0].name}}</h3>
+              <p class='beer1info'>{{styles.data[0].description}}</p>
+              <h3 class='beer2'>{{styles.data[1].name}}</h3>
+              <p class='beer2info'>{{styles.data[1].description}}</p>
+              <h3 class='beer3'>{{styles.data[2].name}}</h3>
+              <p class='beer3info'>{{styles.data[2].description}}</p>
+              <h3 class='beer4'>{{styles.data[3].name}}</h3>
+              <p class='beer4info'>{{styles.data[3].description}}</p>
+              <h3 class='beer5'>{{styles.data[4].name}}</h3>
+              <p class='beer5info'>{{styles.data[4].description}}</p>
             </div> <!-- beerInfo -->
           </section> <!-- beerSelection -->
 
