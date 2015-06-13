@@ -6,20 +6,13 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- Add your site or application content here -->
         <main>
           <section class='grid'>
             <div class='unit 1'></div>
@@ -55,11 +48,11 @@
 
           <section class='suggestedBeer'>
             <ul>
-              <li>Beer 1</li>
-              <li>Beer 2</li>
-              <li>Beer 3</li>
-              <li>Beer 4</li>
-              <li>Beer 5</li>
+              <li class=beer1>{{styles.data[0].name}}</li>
+              <li class=beer2>{{styles.data[1].name}}</li>
+              <li class=beer3>{{styles.data[2].name}}</li>
+              <li class=beer4>{{styles.data[3].name}}</li>
+              <li class=beer5>{{styles.data[4].name}}</li>
             </ul>
           </section>
 
@@ -70,15 +63,24 @@
           <section class='beerSelection'>
             <label for='beerType'>
               <select>
-                <option>Beer 1</option>
-                <option>Beer 2</option>
-                <option>Beer 3</option>
-                <option>Beer 4</option>
-                <option>Beer 5</option>
+                <option class='beer1'>{{styles.data[0].name}}</option>
+                <option class='beer2'>{{styles.data[1].name}}</option>
+                <option class='beer3'>{{styles.data[2].name}}</option>
+                <option class='beer4'>{{styles.data[3].name}}</option>
+                <option class='beer5'>{{styles.data[4].name}}</option>
               </select>
             </label> <!-- beerType -->
             <div class='beerInfo'>
-              <p>{{description}}</p>
+              <h3 class='beer1'>{{styles.data[0].name}}</h3>
+              <p class='beer1info'>{{styles.data[0].description}}</p>
+              <h3 class='beer2'>{{styles.data[1].name}}</h3>
+              <p class='beer2info'>{{styles.data[1].description}}</p>
+              <h3 class='beer3'>{{styles.data[2].name}}</h3>
+              <p class='beer3info'>{{styles.data[2].description}}</p>
+              <h3 class='beer4'>{{styles.data[3].name}}</h3>
+              <p class='beer4info'>{{styles.data[3].description}}</p>
+              <h3 class='beer5'>{{styles.data[4].name}}</h3>
+              <p class='beer5info'>{{styles.data[4].description}}</p>
             </div> <!-- beerInfo -->
           </section> <!-- beerSelection -->
 
@@ -86,7 +88,6 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
     </body>
