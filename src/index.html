@@ -20,7 +20,69 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>We are building something beautiful!</p>
+        <main>
+          <section class='grid'>
+            <div class='unit 1'></div>
+            <div class='unit 2'></div>
+            <div class='unit 3'></div>
+            <div class='unit 4'></div>
+            <div class='unit 5'></div>
+            <div class='unit 6'></div>
+            <div class='unit 7'></div>
+            <div class='unit 8'></div>
+            <div class='unit 9'></div>
+            <div class='unit 10'></div>
+            <div class='unit 11'></div>
+            <div class='unit 12'></div>
+          </section> <!-- grid -->
+
+          <header class='beerHarmony'>
+            <h1>beerHarmony</h1>
+            <p>Find your ultimate beer style match with beerHarmony! Simply enter your name, pick a beer syle, and click 'Compatibility!'</p>
+          </header> <!-- beerHarmony -->
+
+          <form class='information'>
+            <label for='name'>
+              <span>Enter your name: </span>
+              <input class='name' placeholder='Your Name'></input>
+            <label> <!-- name -->
+              <label for='beer'>
+                <span>Type of Beer: </span>
+                <input class='beer' placeholder='Beer Category'></input>
+            <label> <!-- beer -->
+            <button>Compatibility!</button>
+          </form> <!-- information -->
+
+          <section class='suggestedBeer'>
+            <ul>
+              <li>Beer 1</li>
+              <li>Beer 2</li>
+              <li>Beer 3</li>
+              <li>Beer 4</li>
+              <li>Beer 5</li>
+            </ul>
+          </section>
+
+          <section class='percentage'>
+            <p>{{percentage}}</p>
+          </section> <!-- percentage -->
+
+          <section class='beerSelection'>
+            <label for='beerType'>
+              <select>
+                <option>Beer 1</option>
+                <option>Beer 2</option>
+                <option>Beer 3</option>
+                <option>Beer 4</option>
+                <option>Beer 5</option>
+              </select>
+            </label> <!-- beerType -->
+            <div class='beerInfo'>
+              <p>{{description}}</p>
+            </div> <!-- beerInfo -->
+          </section> <!-- beerSelection -->
+
+        </main>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
