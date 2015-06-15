@@ -84,11 +84,35 @@
             </div> <!-- beerInfo -->
           </section> <!-- beerSelection -->
 
+          <section>
+            <button class="button">TEST RECIPE</button>
+            <!-- <span id="results"></span> -->
+            </section>
         </main>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
+        <script>
+          $(document).ready(function(){
+            $('.button').click(function(e){
+              e.preventDefault();
+              var apiKey = "dvxWg54HoQR4Jug2Ey6r0ORzI8qs9kV0";
+var recipeID = 196149;
+var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
+$.ajax({
+         type: "GET",
+         dataType: 'json',
+         cache: false,
+         url: url,
+         success: function (data) {
+            console.log(data);
+            }
+         });
+
+            });
+          });
+        </script>
 
     </body>
 </html>
