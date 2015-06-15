@@ -6,26 +6,112 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <main>
+          <section class='grid'>
+            <div class='unit 1'>1</div>
+            <div class='unit 2'>2</div>
+            <div class='unit 3'>3</div>
+            <div class='unit 4'>4</div>
+            <div class='unit 5'>5</div>
+            <div class='unit 6'>6</div>
+            <div class='unit 7'>7</div>
+            <div class='unit 8'>8</div>
+            <div class='unit 9'>9</div>
+            <div class='unit 10'>10</div>
+            <div class='unit 11'>11</div>
+            <div class='unit 12'>12</div>
+          </section> <!-- grid -->
 
-        <!-- Add your site or application content here -->
-        <p>We are building something beautiful!</p>
+          <header class='beerHarmony'>
+            <h1>beerHarmony</h1>
+            <p>Find your ultimate beer style match with beerHarmony! Simply enter your name, pick a beer syle, and click 'Compatibility!'</p>
+          </header> <!-- beerHarmony -->
+
+          <form class='information'>
+            <label for='name'>
+              <span>Enter your name: </span>
+              <input class='name' placeholder='Your Name'></input>
+            <label> <!-- name -->
+              <label for='beer'>
+                <span>Type of Beer: </span>
+                <input class='beer' placeholder='Beer Category'></input>
+            <label> <!-- beer -->
+            <button>Compatibility!</button>
+          </form> <!-- information -->
+
+          <section class='suggestedBeer'>
+            <ul>
+              <li class=beer1>{{styles.data[0].name}}</li>
+              <li class=beer2>{{styles.data[1].name}}</li>
+              <li class=beer3>{{styles.data[2].name}}</li>
+              <li class=beer4>{{styles.data[3].name}}</li>
+              <li class=beer5>{{styles.data[4].name}}</li>
+            </ul>
+          </section>
+
+          <section class='percentage'>
+            <p>{{percentage}}</p>
+          </section> <!-- percentage -->
+
+          <section class='beerSelection'>
+            <label for='beerType'>
+              <select>
+                <option class='beer1'>{{styles.data[0].name}}</option>
+                <option class='beer2'>{{styles.data[1].name}}</option>
+                <option class='beer3'>{{styles.data[2].name}}</option>
+                <option class='beer4'>{{styles.data[3].name}}</option>
+                <option class='beer5'>{{styles.data[4].name}}</option>
+              </select>
+            </label> <!-- beerType -->
+            <div class='beerInfo'>
+              <h3 class='beer1'>{{styles.data[0].name}}</h3>
+              <p class='beer1info'>{{styles.data[0].description}}</p>
+              <h3 class='beer2'>{{styles.data[1].name}}</h3>
+              <p class='beer2info'>{{styles.data[1].description}}</p>
+              <h3 class='beer3'>{{styles.data[2].name}}</h3>
+              <p class='beer3info'>{{styles.data[2].description}}</p>
+              <h3 class='beer4'>{{styles.data[3].name}}</h3>
+              <p class='beer4info'>{{styles.data[3].description}}</p>
+              <h3 class='beer5'>{{styles.data[4].name}}</h3>
+              <p class='beer5info'>{{styles.data[4].description}}</p>
+            </div> <!-- beerInfo -->
+          </section> <!-- beerSelection -->
+
+          <section>
+            <button class="button">TEST RECIPE</button>
+            <!-- <span id="results"></span> -->
+            </section>
+        </main>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script>
+          $(document).ready(function(){
+            $('.button').click(function(e){
+              e.preventDefault();
+              var apiKey = "dvxWg54HoQR4Jug2Ey6r0ORzI8qs9kV0";
+var recipeID = 196149;
+var url = "http://api.bigoven.com/recipe/" + recipeID + "?api_key="+apiKey;
+$.ajax({
+         type: "GET",
+         dataType: 'json',
+         cache: false,
+         url: url,
+         success: function (data) {
+            console.log(data);
+            }
+         });
+
+            });
+          });
+        </script>
 
     </body>
 </html>
